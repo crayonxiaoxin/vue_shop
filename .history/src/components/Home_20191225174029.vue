@@ -9,7 +9,7 @@
     </el-header>
     <el-container>
       <el-aside width="200px">
-        <el-menu :default-openeds="['1', '3']" background-color="#333744" text-color="#fff">
+        <el-menu :default-openeds="['1', '3']">
           <el-submenu index="1">
             <template slot="title">
               <i class="el-icon-message"></i>导航一
