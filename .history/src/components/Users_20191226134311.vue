@@ -246,7 +246,7 @@ export default {
         this.getUserList()
       })
     },
-    deleteUserById: async function(id) {
+    deleteUserById: async function() {
       const confirm = await this.$confirm(
         '此操作将永久删除该用户, 是否继续?',
         '提示',
@@ -255,17 +255,8 @@ export default {
           cancelButtonText: '取消',
           type: 'warning'
         }
-      ).catch(res => res)
+      )
       console.log(confirm)
-      if (confirm !== 'confirm') {
-        return this.$message.info('已取消删除')
-      }
-      const { data: res } = await this.$http.delete(`users/${id}`)
-      if (res.meta.status !== 200) {
-        return this.$message.error('删除用户失败')
-      }
-      this.$message.success('删除用户成功')
-      this.getUserList()
     }
   }
 }
