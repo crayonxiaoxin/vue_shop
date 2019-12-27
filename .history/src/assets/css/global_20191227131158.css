@@ -27,8 +27,6 @@ html, body, #app {
     max-height: 300px;
 }
 
-/* 级联菜单隐藏radio并且label可点击 */
-
 .el-cascader-panel .el-radio {
     width: 100%;
     height: 100%;
