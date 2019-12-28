@@ -32,7 +32,7 @@ const routes = [
       { path: '/goods', component: Goods },
       { path: '/goods/add', component: GoodsAdd },
       { path: '/orders', component: Order },
-      { path: '/reports', component: Report }
+      { path: '/reports', component: { path: '/orders', component: Order } }
     ]
   }
 ]
